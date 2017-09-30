@@ -301,49 +301,169 @@ def smaller_root(a, b, c):
 # Interactive applications
 ###################################################
 
-# 1.
+import simplegui
 
-# 2.
+# 1. Given the program template below, write a Python function print_goodbye() that defines a local variable message whose value is "Goodbye" and prints the value of this local variable to the console. Note that the existing global variable message retains its original value "Hello" after the call to print_goodbye() completes.
 
-# 3.
+def print_goodbye():
+    message = "Goodbye"
+    print message
 
-# 4.
+# 2. Given the program template below, write a Python function set_goodbye() that updates a global variable message with the value "Goodbye" and prints the value of this global variable to the console. Note that the existing global variable message has its original value "Hello" modified to "Goodbye" during the call to set_goodbye().
 
-# 5.
+def set_goodbye():
+  global message
+  message = "Goodbye"
+  print message
 
-# 6.
+# 3. Challenge: Given the program template below, implement four functions that manipulate a global variable count as follows. The function reset() sets the value of count to be zero, the function increment() adds one to count, the function decrement() subtracts one from count, and the function print_count() that prints the value of count to the console.
 
-# 7.
+def reset():
+  global count
+  count = 0
 
-# 8.
+def increment():
+  global count
+  count = count + 1
 
-# 9.
+def decrement():
+  global count
+  count = count - 1
 
-# 10.
+def print_count():
+  global count
+  print count
+
+# 4. Complete the program template below so that the resulting CodeSkulptor program opens a frame of size 100×200 with the title "My first frame". You will need to add only two extra lines of code.
+
+message = "My first frame!"
+
+# Handler for mouse click
+def click():
+  print message
+
+# Create a frame and assign callbacks to event handlers
+frame = simplegui.create_frame("My first frame", 100, 200)
+frame.add_button("Click me", click)
+
+frame.start
+
+# 5. Given the program template below, modify the program to create a CodeSkulptor frame that opens a 200×100 pixel frame with the title "My second frame". Remember to use the Docs to determine the correct syntax for the necessary SimpleGUI calls.
+
+message = "My second frame!"
+
+# Handler for mouse click
+def click_2():
+  print message
+
+# Assign callbacks to event handlers
+frame = simplegui.create_frame("My second frame", 200, 100)
+frame.add_button("Click me", click_2)
+
+# Start the frame animation
+frame.start()
 
 ###################################################
 # Buttons and input fields
 ###################################################
 
-# 1.
+# 1. Write event handlers print_hello() and print_goodbye() for the two buttons with labels "Hello" and "Goodbye" defined in the program template below. Pressing these buttons should print the messages "Hello" and "Goodbye", respectively, in the console.
 
-# 2.
+# Handlers for buttons
+def print_hello():
+  print "Hello"
 
-# 3.
+def print_goodbye_2():
+  print "Goodbye"
 
-# 4.
+# Create frame and assign callbacks to event handlers
+frame = simplegui.create_frame("Hello and Goodbye", 200, 200)
+frame.add_button("Hello", print_hello)
+frame.add_button("Goodbye", print_goodbye_2)
 
-# 5.
+# Start the frame animation
+frame.start()
 
-# 6.
+# 2. Given the three function print_color(), set_red(), and set_blue() in the program template below, create three buttons that print and manipulate the global variable color. Use the CodeSkulptor Docs to determine the SimpleGUI method for creating a button if needed.
 
-# 7.
+# Handlers for buttons
+def set_red():
+    global color
+    color = "red"
 
-# 8.
+def set_blue():
+    global color
+    color = "blue"
 
-# 9.
+def print_color():
+    print color
 
-# 10.
+# Create frame
+frame = simplegui.create_frame("Set and print colors", 200, 200)
+frame.add_button("Red", set_red)
+frame.add_button("Blue", set_blue)
+frame.add_button("Print", print_color)
+
+# Start the frame animation
+frame.start()
+
+# 3. Challenge: Given the program template below, implement four buttons that manipulate a global variable count as follows. The function reset() sets the value of count to be zero, the function increment() adds one to count, the function decrement() subtracts one from count, and the function print_count() prints the value of count to the console.
+
+# Define event handlers for four buttons
+def reset_2():
+    global count
+    count = 0
+
+def increment_2():
+    global count
+    count = count + 1
+
+def decrement_2():
+    global count
+    count = count - 1
+
+def print_count_2():
+    global count
+    print count
+
+
+# Create frame and assign callbacks to event handlers
+frame = simplegui.create_frame("frame", 100, 200)
+frame.add_button("Reset", reset_2)
+frame.add_button("Increment", increment_2)
+frame.add_button("Decrement", decrement_2)
+frame.add_button("Print count", print_count_2)
+
+# Start the frame animation
+frame.start()
+
+# 4. Write a program that creates an input field and echoes input to that field to the console.
+
+# Handlers for input field
+def get_input(text_input):
+    print text_input
+
+# Create frame and assign callbacks to event handlers
+frame = simplegui.create_frame("Echo input", 200, 200)
+frame.add_input("Input", get_input, 100)
+
+# Start the frame animation
+frame.start()
+
+# 5. Write a program allows a user to enter a word in an input field, translates that word into Pig Latin and prints this translation in the console. For the sake of modularity, we suggest that you build a helper function that handles all of the details of translating a word to Pig Latin (see the practice exercises for logic and conditionals) . The provided template includes the operations for extracting the first letter and rest of the input word in the partial definition of this function.
+
+# pig_latin() helper function defined above
+
+# Handler for input field
+def get_input_2(text_input):
+    print pig_latin(text_input)
+
+# Create frame and assign callbacks to event handlers
+frame = simplegui.create_frame("Pig Latin translator", 200, 200)
+frame.add_input("Input", get_input_2, 100)
+
+# Start the frame animation
+frame.start()
 
 ###################################################
 # Drawing
