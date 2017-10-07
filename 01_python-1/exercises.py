@@ -549,25 +549,137 @@ frame.start()
 # Timers
 ###################################################
 
-# 1.
+# 1. The following program should count upward from zero. Print the counter values 0, 1, 2, … to the console. Add two lines of Python to make this program work. Hint: Add a global variable to a timer callback, and start a timer
 
-# 2.
+counter = 0
 
-# 3.
+# Timer handler
+def tick():
+    global counter
+    print counter
+    counter += 1
 
-# 4.
+# create timer
+timer = simplegui.create_timer(1000, tick)
 
-# 5.
+timer.start()
 
-# 6.
+# 2. Given the solution from the following problem, we again want a counter printed to the console. Add three buttons that start, stop and reset the counter, respectively.
 
-# 7.
+counter_2 = 0
 
-# 8.
+# Timer handler
+def tick_2():
+    global counter_2
+    print counter_2
+    counter_2 += 1
 
-# 9.
+# Event handlers for buttons
+def start_timer():
+    timer.start()
 
-# 10.
+
+def stop_timer():
+    timer.stop()
+
+def reset_timer():
+    global counter_2
+    counter_2 = 0
+
+# Create frame and timer
+frame = simplegui.create_frame("Counter with buttons", 200, 200)
+timer = simplegui.create_timer(1000, tick_2)
+frame.add_button("Start Timer", start_timer)
+frame.add_button("Stop Timer", stop_timer)
+frame.add_button("Reset Timer", reset_timer)
+
+# 3. Use a timer to toggle the canvas background back and forth between red and blue every 3 seconds. Use the CodeSkulptor Docs to locate the appropriate call to change the background color of the canvas.
+
+color = "Red"
+
+# Timer handler
+def tick_3():
+    global color
+    if color == "Red":
+        color = "Blue"
+    else:
+        color = "Red"
+    frame.set_canvas_background(color)
+
+# Create frame and timer
+frame = simplegui.create_frame("Counter with buttons", 200, 200)
+timer = simplegui.create_timer(3000, tick_3)
+
+# Start timer
+frame.start()
+timer.start()
+
+# 4. Create a circle in the center of the canvas. Use a timer to increase its radius one pixel every tenth of a second.
+
+WIDTH = 200
+HEIGHT = 200
+radius = 1
+
+# Timer handler
+def tick_4():
+    global radius
+    radius += 1
+
+# Draw handler
+def draw_6(canvas):
+    canvas.draw_circle([100,100], radius, 1, "white")
+
+# Create frame and timer
+frame = simplegui.create_frame("Cool Frame", 200, 200)
+timer = simplegui.create_timer(10, tick_4)
+
+frame.set_draw_handler(draw_6)
+
+# Start timer
+frame.start()
+timer.start()
+
+# 5. Challenge: Use a timer to measure how fast you can press a button twice. Create a button that starts a timer that ticks every hundredth of a second. The first button press starts the measurement. The second button press ends the measurement. Print to the console the time elapsed between button presses. The next two button presses should repeat this process, making a new measurement. Hint: We suggest that you keep track of whether the program is on the first or second button press using a global Boolean variable.
+
+total_ticks = 0
+first_click = True
+
+
+# Timer handler
+def tick_5():
+    global total_ticks
+    total_ticks += 1
+
+# Button handler
+def click_6():
+    global first_click
+    global total_ticks
+
+    if first_click == True:
+        timer.start()
+        print 'Timer started!'
+
+        # set first_click to the opposite boolean
+        first_click = not first_click
+    else:
+        timer.stop()
+        print 'Timer stopped!'
+
+        print 'Total ticks: ' + str(total_ticks)
+
+        # reset the game state
+        total_ticks = 0
+        first_click = True
+
+        print 'Game state reset. Click to play again.'
+
+# Create frame and timer
+frame = simplegui.create_frame("Counter with buttons", 200, 200)
+frame.add_button("Click me", click_6, 200)
+timer = simplegui.create_timer(10, tick_5)
+
+# Start timer
+frame.start()
 
 ###################################################
 # Lists
