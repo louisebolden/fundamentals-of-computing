@@ -469,25 +469,81 @@ frame.start()
 # Drawing
 ###################################################
 
-# 1.
+# 1. Modify the following program template to print "It works!" on the canvas.
 
-# 2.
+# Draw handler
+def draw(canvas):
+    canvas.draw_text("It works!",[120, 112], 48, "Red")
 
-# 3.
+# Create frame and assign callbacks to event handlers
+frame = simplegui.create_frame("It works", 400, 200)
+frame.set_draw_handler(draw)
 
-# 4.
+# Start the frame animation
+frame.start()
 
-# 5.
+# 2. Given the following program template, add draw commands to the draw handler to draw "This is easy?" on the canvas. The precise size and location of the text on the canvas is not important.
 
-# 6.
+# Draw handler
+def draw_2(canvas):
+    canvas.draw_text('This is easy?', [50, 100], 20, 'white')
 
-# 7.
+# Create frame and assign callbacks to event handlers
+frame = simplegui.create_frame("This is easy", 400, 200)
+frame.set_draw_handler(draw_2)
 
-# 8.
+# Start the frame animation
+frame.start()
 
-# 9.
+# 3. Create a canvas of size 96×96, and draw the letter "X" with font size 48 in the upper left portion of the canvas. Review the syntax for the SimpleGUI method draw_text and the layout of canvas coordinates.
 
-# 10.
+# Draw handler
+def draw_3(canvas):
+    canvas.draw_text('X', [0,30], 48, 'white')
+
+# Create frame and assign callbacks to event handlers
+frame = simplegui.create_frame("Draw X", 96, 96)
+frame.set_draw_handler(draw_3)
+
+# Start the frame animation
+frame.start()
+
+# 4. Write a function format_time that takes an integer number of seconds in range(0, 3600) and converts it into string that states the number of minutes and seconds. Remember to use the operations // and %. (Note that this example requires no interactive code.)
+
+def format_time(seconds):
+    minutes = seconds // 60
+    seconds = seconds % 60
+    return "%s minutes and %s seconds" % (minutes, seconds)
+
+# 5. Challenge:Complete the program template below and add two buttons that control the radius of a white ball centered in the middle of the canvas. Clicking the “Increase radius” button should increase the radius of the ball. Clicking the “Decrease radius” button should decrease the radius of the ball, except that the ball radius should always be positive.
+
+# Define globals - Constants are capitalized in Python
+HEIGHT = 400
+WIDTH = 400
+RADIUS_INCREMENT = 5
+ball_radius = 20
+
+# Draw handler
+def draw_4(canvas):
+    canvas.draw_circle([WIDTH/2, HEIGHT/2], ball_radius, 1, "white")
+
+# Event handlers for buttons
+def increase_radius():
+    global ball_radius
+    ball_radius = ball_radius + RADIUS_INCREMENT
+
+def decrease_radius():
+    global ball_radius
+    ball_radius = ball_radius - RADIUS_INCREMENT
+
+# Create frame and assign callbacks to event handlers
+frame = simplegui.create_frame("Ball control", WIDTH, HEIGHT)
+frame.set_draw_handler(draw_4)
+frame.add_button("Increase radius", increase_radius)
+frame.add_button("Decrease radius", decrease_radius)
+
+# Start the frame animation
+frame.start()
 
 ###################################################
 # Timers
