@@ -685,25 +685,66 @@ frame.start()
 # Lists
 ###################################################
 
-# 1.
+# 1. Create a list that contains first 6 prime numbers in ascending order. (This list should be created manually.) Print out the 2nd, 4th, and 6th numbers in this list.
 
-# 2.
+# non-manual prime number list gen...
+list = []
+num = 1
 
-# 3.
+while len(list) < 7:
+    num += 1
+    prime = True
 
-# 4.
+    for lower_num in range(2, num):
+        if num % lower_num == 0:
+            prime = False
+            break
 
-# 5.
+    if prime:
+        list.append(num)
 
-# 6.
+print list[1], list[3], list[5]
 
-# 7.
+# 2. Given the list a in the template, make a new reference b to a. Update the first entry in b to be zero. What happened to the first entry in a? Explain your answer (in a comment).
 
-# 8.
+a = [5, 3, 1, -1, -3, 5]
 
-# 9.
+b = a
 
-# 10.
+b[0] = 0
+
+# the following prints a's list with the new 0 value in the first index, because
+# b is a reference to the same list referenced by a (e.g. not to a copy of it)
+print a
+
+# 3. Given the list a in the template, make a new copy b of the list a using the function list. Update the first entry in b to be zero. What happened to the first entry in a? Explain your answer (in a comment).
+
+a_2 = [5, 3, 1, -1, -3, 5]
+
+b_2 = list(a)
+
+b_2[1] = 0
+
+# here, the list referenced by a is unchanged because b contains a duplicate of
+# the list
+print a_2
+
+# 4. Write a function add_vector(v, w) that takes two 2D vectors v and w (represented as lists) and returns a new 2D vector (represented as a list) that is the sum of the two vectors. Remember that vector addition is performed independently on each corresponding element of the lists. Hint: returning v + w does not work.
+
+def add_vector(v, w):
+    return [
+      v[0] + w[0],
+      v[1] + w[1]
+    ]
+
+# 5. Challenge: The program template below is a program designed to run two independent timers with their own start and stop buttons. In particular, each timer should be controlled by its own buttons independent of the other timer's buttons. The current version has an error that causes both timers to work in unison. Find and fix this error.
+
+# Initialize two counters.
+counter1 = [0, 0]
+counter2 = counter1
+
+# (remainder of code cut for brevity, because the bug was introduced above in
+# setting counter2 to reference the same list referenced by counter1)
 
 ###################################################
 # Keyboard
