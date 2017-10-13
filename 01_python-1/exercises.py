@@ -744,31 +744,135 @@ counter1 = [0, 0]
 counter2 = counter1
 
 # (remainder of code cut for brevity, because the bug was introduced above in
-# setting counter2 to reference the same list referenced by counter1)
+# setting counter2 to reference the same list that is referenced by counter1)
 
 ###################################################
 # Keyboard
 ###################################################
 
-# 1.
+# 1. The program template contains a program designed to echo the message "Pressed up arrow" or "Pressed down arrow" whenever the appropriate key is pressed. Debug the program template and fix the program.
 
-# 2.
+message = "Welcome!"
 
-# 3.
+# Handler for keydown
+def keydown(key):
+    print key
+    global message
+    if key == simplegui.KEY_MAP["up"]:
+        message = "Up arrow"
+    elif key == simplegui.KEY_MAP["down"]:
+        message = "Down arrow"
 
-# 4.
+# Handler to draw on canvas
+def draw_8(canvas):
+    canvas.draw_text(message, [50,112], 48, "Red")
 
-# 5.
+# Create a frame and assign callbacks to event handlers
+frame = simplegui.create_frame("Home", 300, 200)
+frame.set_draw_handler(draw_8)
+frame.set_keydown_handler(keydown)
 
-# 6.
+# Start the frame animation
+frame.start()
 
-# 7.
+# 2. Complete the program template below so that each press of the up arrow increases the radius of the white ball centered in the middle of the canvas by a small fixed amount and each press of the down arrow key decreases the radius of the ball by the same amount. Your added code should be placed in the keydown handler. (Note that draw_circle will throw an error if the radius of the circle is decreased to zero or less.)
 
-# 8.
+WIDTH = 300
+HEIGHT = 200
+ball_radius = 50
+BALL_RADIUS_INC = 3
 
-# 9.
+# Handler for keydown
+def keydown_2(key):
+    global ball_radius
 
-# 10.
+    # Add code here to control ball_radius
+    if key == simplegui.KEY_MAP["up"]:
+        ball_radius += BALL_RADIUS_INC
+    elif key == simplegui.KEY_MAP["down"]:
+        ball_radius -= BALL_RADIUS_INC
+
+# Handler to draw on canvas
+def draw_9(canvas):
+    # note that CodeSkulptor throws an error if radius is not positive
+    canvas.draw_circle([WIDTH / 2, HEIGHT / 2], ball_radius, 1, "White", "White")
+
+# Create a frame and assign callbacks to event handlers
+frame = simplegui.create_frame("Home", 300, 200)
+frame.set_keydown_handler(keydown_2)
+frame.set_draw_handler(draw_9)
+
+# Start the frame animation
+frame.start()
+
+# 3. Complete the program template so that the program displays "Space bar down" on the canvas while the space bar is held down and "Space bar up" while the space bar is up. You will need to add code to both the keydown and keyup handlers.
+
+message = "Space bar up"
+
+# Handlers for keydown and keyup
+def keydown_3(key):
+    global message
+
+    if key == simplegui.KEY_MAP["space"]:
+        message = "Space bar down"
+
+def keyup(key):
+    global message
+
+    if key == simplegui.KEY_MAP["space"]:
+        message = "Space bar up"
+
+
+# Handler to draw on canvas
+def draw_10(canvas):
+    canvas.draw_text(message, [25, 112], 42, "Red")
+
+# Create a frame and assign callbacks to event handlers
+frame = simplegui.create_frame("Home", 300, 200)
+frame.set_keydown_handler(keydown_3)
+frame.set_keyup_handler(keyup)
+frame.set_draw_handler(draw_10)
+
+# Start the frame animation
+frame.start()
+
+# 4. Challenge: Complete the program template below so that holding down the up arrow key increases the radius of the white ball centered in the middle of the canvas by a small fixed amount each frame. Releasing the up arrow key causes that growth to cease. You will need to add code to the keydown and keyup handlers as well as the draw handler.
+
+WIDTH = 300
+HEIGHT = 200
+ball_radius = 10
+ball_growth = 0
+BALL_GROWTH_INC = .2
+
+# Handlers for keydown and keyup
+def keydown_4(key):
+    global ball_growth
+    if key == simplegui.KEY_MAP["up"]:
+        ball_growth = BALL_GROWTH_INC
+
+def keyup_2(key):
+    global ball_growth
+    if key == simplegui.KEY_MAP["up"]:
+        ball_growth = 0
+
+# Handler to draw on canvas
+def draw_11(canvas):
+    global ball_radius
+
+    ball_radius += ball_growth
+
+    # note that CodeSkulptor throws an error if radius is not positive
+    canvas.draw_circle([WIDTH / 2, HEIGHT / 2], ball_radius, 1, "White", "White")
+
+# Create a frame and assign callbacks to event handlers
+frame = simplegui.create_frame("Home", 300, 200)
+frame.set_keydown_handler(keydown_4)
+frame.set_keyup_handler(keyup_2)
+
+frame.set_draw_handler(draw_11)
+
+# Start the frame animation
+frame.start()
 
 ###################################################
 # Mouse and list methods
