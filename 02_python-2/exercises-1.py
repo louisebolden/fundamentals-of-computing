@@ -114,7 +114,6 @@ polyline = []
 
 # define mouseclick handler
 def click_3(pos):
-    print pos
     polyline.append(pos)
 
 # button to clear canvas
