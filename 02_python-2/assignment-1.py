@@ -41,7 +41,6 @@ def mouseclick(pos):
         if exposed[card_index] == False:
             exposed[card_index] = True
             cached_card_1 = card_index
-            turns += 1
 
         # update state to reflect 1 exposed card
         state = 1
@@ -52,6 +51,8 @@ def mouseclick(pos):
         if exposed[card_index] == False:
             exposed[card_index] = True
             cached_card_2 = card_index
+
+            # count a new turn
             turns += 1
 
             # update state to reflect 2 exposed cards
@@ -68,7 +69,6 @@ def mouseclick(pos):
         if exposed[card_index] == False:
             exposed[card_index] = True
             cached_card_1 = card_index
-            turns += 1
 
         # move back to state 1
         state = 1
