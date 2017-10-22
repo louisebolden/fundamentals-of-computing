@@ -9,7 +9,7 @@ Work undertaken as part of the [Fundamentals of Computing Specialization](https:
     * Canvas, drawing, timers [[exercises](https://github.com/louiseswift/fundamentals-of-computing/blob/master/01_python-1/exercises.py#L469), [peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/01_python-1/assignment-3.py)]
     * Lists, keyboard input, the basics of modeling motion [[exercises](https://github.com/louiseswift/fundamentals-of-computing/blob/master/01_python-1/exercises.py#L685), [peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/01_python-1/assignment-4.py)]
 2. An Introduction to Interactive Programming in Python (Part 2)
-    * Mouse input and more lists; dictionaries and images [[exercises](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/exercises-1.py), assignment]
+    * Mouse input and more lists; dictionaries and images [[exercises](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/exercises-1.py), [peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/assignment-1.py)
 3. Principles of Computing (Part 1)
 4. Principles of Computing (Part 2)
 5. Algorithmic Thinking (Part 1)
