@@ -12,7 +12,7 @@ Work undertaken as part of the [Fundamentals of Computing Specialization](https:
     * Mouse input and more lists; dictionaries and images [[exercises](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/exercises-1.py), [peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/assignment-1.py)
     * Classes; tiled images ([exercises](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/exercises-2.py), [peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/assignment-2.py))
     * More classes; sprites ([peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/assignment-3.py))
-    * Sets; animation ([peer-graded assignment]())
+    * Sets; animation ([peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/assignment-4.py))
 3. Principles of Computing (Part 1)
 4. Principles of Computing (Part 2)
 5. Algorithmic Thinking (Part 1)
