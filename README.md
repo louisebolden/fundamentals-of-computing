@@ -16,6 +16,7 @@ Work undertaken as part of the [Fundamentals of Computing Specialization](https:
 3. Principles of Computing (Part 1)
     * Coding standards and machine grading ([machine-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/03_computing-1/assignment-1.py) - 100%)
     * Testing, plotting, and grids ([machine-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/03_computing-1/assignment-2.py) - 100%)
+    * Probability, randomness and objects/references ([machine-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/03_computing-1/assignment-3.py) - 100%)
 4. Principles of Computing (Part 2)
 5. Algorithmic Thinking (Part 1)
 6. Algorithmic Thinking (Part 2)
