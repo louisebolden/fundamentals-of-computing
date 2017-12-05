@@ -13,13 +13,13 @@ Work undertaken as part of the [Fundamentals of Computing Specialization](https:
     * Classes; tiled images ([exercises](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/exercises-2.py), [peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/assignment-2.py))
     * More classes; sprites ([peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/assignment-3.py))
     * Sets; animation ([peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/assignment-4.py))
-<br>Gif of 'Rice Rocks' assignment:
+<br>Gif of 'Rice Rocks' assignment:<br>
 ![rice-rocks project gif](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/RiceRocks.gif?raw=true)
 3. Principles of Computing (Part 1)
     * Coding standards and machine grading ([machine-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/03_computing-1/assignment-1.py) - 100%)
     * Testing, plotting, and grids ([machine-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/03_computing-1/assignment-2.py) - 100%)
     * Probability, randomness and objects/references ([machine-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/03_computing-1/assignment-3.py) - 100%)
-<br>Gif of 'Monte Carlo Tic-Tac-Toe' assignment:
+<br>Gif of 'Monte Carlo Tic-Tac-Toe' assignment:<br>
 ![monte carlo tic-tac-toe project gif](https://github.com/louiseswift/fundamentals-of-computing/blob/master/03_computing-1/Monte-Carlo-Tic-Tac-Toe.gif?raw=true)
 4. Principles of Computing (Part 2)
 5. Algorithmic Thinking (Part 1)
