@@ -13,7 +13,7 @@ Work undertaken as part of the [Fundamentals of Computing Specialization](https:
     * Classes; tiled images ([exercises](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/exercises-2.py), [peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/assignment-2.py))
     * More classes; sprites ([peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/assignment-3.py))
     * Sets; animation ([peer-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/02_python-2/assignment-4.py))
-    ![rice-rocks project gif](fundamentals-of-computing/02_python-2/RiceRocks.gif)
+![rice-rocks project gif](fundamentals-of-computing/02_python-2/RiceRocks.gif)
 3. Principles of Computing (Part 1)
     * Coding standards and machine grading ([machine-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/03_computing-1/assignment-1.py) - 100%)
     * Testing, plotting, and grids ([machine-graded assignment](https://github.com/louiseswift/fundamentals-of-computing/blob/master/03_computing-1/assignment-2.py) - 100%)
