@@ -11,7 +11,7 @@ NTRIALS = 10        # Number of trials to run
 SCORE_CURRENT = 1.0 # Score for squares played by the current player
 SCORE_OTHER = 1.0   # Score for squares played by the other player
 
-
+# Functions for Monte Carlo simulations
 def mc_trial(board, player):
     """
     This function takes a current board and the next player to move.
@@ -38,7 +38,7 @@ def mc_update_scores(scores, board, player):
     dim = board.get_dim()
     winner = board.check_win()
 
-    # set scorring values depending on winner
+    # set scoring values depending on winner
     if player == winner:
         score_current = SCORE_CURRENT
         score_other = -SCORE_OTHER
@@ -106,7 +106,15 @@ def mc_move(board, player, trials):
     for _ in range(trials):
         trial = board.clone()
         mc_trial(trial, player)
-        #update the scores list after every trial
+
+        # update the scores list after every trial
         mc_update_scores(scores, trial, player)
 
     return get_best_move(board, scores)
+
+# Test game with the console or the GUI.  Uncomment whichever
+# you prefer.  Both should be commented out when you submit
+# for testing to save time.
+
+# provided.play_game(mc_move, NTRIALS, False)
+poc_ttt_gui.run_gui(3, provided.PLAYERX, mc_move, NTRIALS, False)
